@@ -10,18 +10,25 @@
             font-size: 36px;
             text-align: center;
         }
-
-        h2{
+        /* grouped selectors*/
+        h2, .p2{
             color:darkmagenta;
             font-size: 22px;
             text-align: left;
+            background-color: antiquewhite;
         }
         header, p{
+            
             color:rgb(129, 90, 50);
             font-size: 18px;
             text-align: left;
             width: 1080px;
             font-family:'Courier New', Courier, monospace;
+        }
+
+        #extra-text{
+            font-size: 25px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -59,7 +66,7 @@ her onto a Hoat and as I did, I brushed against her breasts.
     <h2>
         Second paragraph
     </h2>   
-    <p>
+    <p class = "p2">
         When I woke up, Marie had gone. She'd explained
 to me that she had to go to her aunt's. I remembered that
 it was Sunday, and that bothered me: I don't like Sundays. So I rolled over, tried to find the salty smell Marie's
@@ -79,7 +86,7 @@ something to do, I picked up an old newspaper and read
 it. I cut out an advertisement for Kruschen Salts and
 stuck it in an old notebook where I put things from the
 papers that interest me. I also washed my hands, and
-then I went out onto the balcony. 
+then I went out onto the balcony. <span id="extra-text"> extra bit of text</span>
     </p>
 </body>
 </html>
