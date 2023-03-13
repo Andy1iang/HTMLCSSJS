@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>CSS Selectors</title>
     <style>
-        article>p{
-            color: blue;
+        h1{text-align:center;}
+        li{color:purple;}
+        #id-selector, #group-selection{font-size:20px;}
+        div.second-class{color:darkgreen;}
+        .one-of-us{font-family:'Courier New', Courier, monospace;}
+        div>span{color:blue;}
+        section>ul>li{list-style:none;}
+        /*removes bullet points*/
+        a:link, a:visited{
+            border:1px solid black;
+            display:block;
+            text-decoration:none;
+            margin-bottom:5px;
+            width: 200px;
+            text-align:center;
+        }
+        section#Pseudo-Selectors:hover{background-color:bisque;}
+        section#Pseudo-Selectors>div:nth-child(3):active{
+            background-color:orange;
+            cursor:grab;
+            background-color:white;
         }
     </style>
 </head>
@@ -13,19 +32,73 @@
     <h1>
         CSS Selectors
     </h1>
-    <h2>
-        Grouping Selectors
-    </h2>
-    <article>
+    <section id="Selectors">
+        <h2>Selectors</h2>
         <div>
-            <p>
-                this text shouldn't change
-            </p>
+            <ul>
+                All bullet points will be colors purple
+                <li>Element Selectors applies style to all selected elements</li>
+                <li>Class Selectors use period to choose classes&#44; all one&#45;of&#45;us
+                    will have a different font
+                </li>
+                <li id="id-selector">ID selectors chooses each ID by using hashtag to choose IDs</li>
+            </ul>
         </div>
-        <p>
-            this text should change
-        </p>
-    </article>
-    
+        <div class="one-of-us" id="group-selection">
+            selectors can also be grouped&#44; so this text and the id selector will both be font size 20
+        </div>
+    </section>
+    <section id="Combining-Selectors">
+        <h2>Combining Selectors</h2>
+        <!--the space in the class means they are separate classes-->
+        <div class="one-of-us second-class">
+            Combining Selectors&#58; <br>
+            placing selectors next to each other like this&#58;<br> 
+            &emsp;div&#46;one&#45;of&#45;us <br>
+            means every div with the class one&#45;of&#45;us will be selected<br>
+            this div will be color dark green
+        </div>
+        <br>
+        <div class="one-of-us">
+            <span>
+                Child Selector&#58; <br>
+                using the larger than sign &#62; means any immediate child of an element 
+                that is given is selected <br>
+                In this case, all spans inside a div will be selected&#58; <br>
+                &emsp;div&#62;span<br>
+                So this text will turn blue&#44; but the others won't
+            </span>
+        </div>
+
+        <div class="one-of-us">
+            <br>
+            Descendant Selector&#58; <br>
+            putting a space between two elements&#44; classes&#44; or IDs will choose all 
+            items that is in the first item&#58; <br>
+            &emsp;div span<br>
+            that will choose all spans that are inside divs
+        </div>
+    </section>
+
+    <section id="Pseudo-Selectors">
+        <h2>Pseudo Selectors</h2>
+        <div>
+        <ul>
+            <li><a href="https://crazypigdesigns.com/rings-skull-rings/28-157711-crazy-pig-mascot-skull-ring#/831-ring_sizes-uk_k" target="_blank">Gilfoyle Ring</a></li>
+            <li><a href="https://weather.com/" target="_blank">Weather</a></li>
+            <li><a href="https://www.rapidtables.com/web/html/html-codes.html" target="_blank">HTML symbols</a></li>
+        </ul>
+        links can be customized based on visited or not
+        the links will have borders around them<br><br>
+        </div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+        <div>div6</div>
+        there are also hover and active options to customize content
+        when hovering over this section&#44; all of the section background will be tan
+        when clicked on div2&#44; the background will be orange
+    </section>
 </body>
 </html>
